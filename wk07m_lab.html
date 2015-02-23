@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Strings Lab</title>
+</head>
+<script>
+	function analyzeEmail(){
+		var emailString = document.getElementById('email').value;
+		var prefixString = emailString.substring(0,emailString.indexOf('@'));
+		var domainString = emailString.substring(emailString.indexOf('@')+1, emailString.length); 
+		 document.getElementById('prefix').innerHTML = prefixString;
+		 document.getElementById('domain').innerHTML = domainString;
+	}
+
+</script>
+<body>
+	Email: <input type="text" id="email">
+	<button onclick="analyzeEmail()">Analyze!</button>
+	<br/><br/>
+	Email Prefix: <span id="prefix">ttrojan</span> <!-- replace 'ttrojan' -->
+	<br/>
+	Email Domain: <span id="domain">usc.edu</span> <!-- replace 'usc.edu' -->
+</body>
+</html>
